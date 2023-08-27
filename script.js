@@ -29,7 +29,7 @@ function addNewPRField()
 {
     let newNode=document.createElement("textarea");
     newNode.classList.add("form-control");
-    newNode.classList.add("prfield");
+    newNode.classList.add("prField");
     newNode.classList.add("mt-3");
     newNode.setAttribute("rows",3);
     newNode.setAttribute("placeholder", "Enter Here");
@@ -49,7 +49,7 @@ function generateCV()
     // for contact details
      document.getElementById("contactT").innerHTML= document.getElementById("ContactField").value;
      document.getElementById("addressT").innerHTML=document.getElementById("AddressField").value;
-
+     document.getElementById("objT").innerHTML=document.getElementById("objField").value
      document.getElementById("linkT").innerHTML=document.getElementById("LiField").value;
      document.getElementById("hackT").innerHTML=document.getElementById("HkField").value;
      document.getElementById("leetT").innerHTML=document.getElementById("LtField").value;
@@ -60,9 +60,33 @@ function generateCV()
 
     let str=""
 
-    for(let a of wes)
+    for(let e of wes)
     {
-       str=str+ `<li> (a.value) </li>` ;
+       str=str+ `<li> ${e.value} </li>` ;
     }
     document.getElementById("weT").innerHTML=str;
+
+    // academic qualification
+     
+    let aqs=document.getElementsByClassName("aqField");
+
+    let str1=""
+
+    for(let e of aqs)
+    {
+       str1+= `<li> ${e.value} </li>` ;
+    }
+    document.getElementById("aqT").innerHTML=str1;
+
+    // projects and internships
+
+    let ins=document.getElementsByClassName("prField");
+
+    let str2=""
+
+    for(let e of ins)
+    {
+       str2=str2+ `<li> ${e.value} </li>` ;
+    }
+    document.getElementById("inT").innerHTML=str2;
 }
