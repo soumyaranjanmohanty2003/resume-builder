@@ -1,0 +1,28 @@
+#Gc:hover{
+    transition-duration: 0.3s;
+    background-color: white;
+    color: blue;
+}
+.myimg{
+    border-radius: 50%;
+    width:200px;
+}
+.background{
+    background-color: rgb(140, 196, 212);
+}
+.btn2{
+    color: aliceblue;
+    background-color:blue ;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 70px;
+}
+.btn2:hover{
+    transition-duration: 0.3s;
+    color:blue;
+    background-color:whitesmoke ;
+    border: solid 1px blue;
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
